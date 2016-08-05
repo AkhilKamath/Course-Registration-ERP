@@ -16,14 +16,33 @@
 <table class = "table">
 	<thead>
 		<tr>
-        <th>Hello</th>
-        <th>World</th>
+        <th>COM CODE</th>
+        <th>COURSE CODE</th>
+        <th>COURSE TITLE</th>
+        <th>CREDITS</th>
+        <th>SECTION</th>
+        <th>STAT</th>
+        <th>INSTRUCTOR</th>
+        <th>DAYS</th>
+        <th>ROOM</th>
+        <th>COMPRE DATE</th>
       </tr>
 	</thead>
 	<tbody>
+	{% for i in u %}
 		<tr>
-		<td>{{ u.classcode }}</td><td>world</td>
+		<td>{{ i.classcode }}</td>
+		<td>{{ i.coursecode }}</td>
+		<td>{{ i.coursetitle }}</td>
+		<td>{{ i.creditslpu }}</td>
+		<td>{{ i.section }}</td>
+		<td>{{ i.stat }}</td>
+		<td>{{ i.instructor }}</td>
+		<td>{{ i.days }}</td>
+		<td>{{ i.room }}</td>
+		<td>{{ i.compredate }}</td>
 		</tr>
+	{% endfor %}
 	</tbody>
 </table>
 

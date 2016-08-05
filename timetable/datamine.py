@@ -13,11 +13,11 @@ courses_list = []
 for rownum in range(3, sh.nrows):
     courses = OrderedDict()
     row_values = sh.row_values(rownum)
-    courses['classcode'] = repr(row_values[0])
+    courses['classcode'] = int(row_values[0])
     courses['coursecode'] = row_values[1]
     courses['coursetitle'] = row_values[2]
     courses['creditslpu'] = row_values[3]
-    courses['section'] = repr(row_values[4])
+    courses['section'] = int(row_values[4])
     courses['stat'] = row_values[5]
     courses['instructors'] = row_values[7]
     courses['days'] = row_values[8]
@@ -29,8 +29,8 @@ for rownum in range(3, sh.nrows):
 # Serialize the list of dicts to JSON
 j = json.dumps(courses_list)
  
-# # Write to file
-# with open('data.json', 'w') as f:
-#     f.write(j)
+# Write to file
+with open('data.json', 'w') as f:
+    f.write(j)
 
-print(json.dumps(json.loads(j)[0], indent=4, sort_keys=True))
+print(json.dumps(json.loads(j), indent=4, sort_keys=True))

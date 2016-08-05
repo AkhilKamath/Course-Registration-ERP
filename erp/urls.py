@@ -20,4 +20,5 @@ from timetable import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^timetable/$', views.timetable, name = 'timetable'),
+    url(r'^setup/$', views.setup, name = 'setup'),
 ]

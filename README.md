@@ -12,10 +12,10 @@
 8. Webserver runs for default on `localhost:8000`. To set the port manually run `python manage.py 8080` for `localhost:8080`
 
 ##Additional Instructions
-1. To edit the templates, go to the templates folder which has all the templates. Note that direct links \(\<a href\>\) won't work in Django backend. Hence please route it through the urls.py in erp folder
+1. To edit the templates, go to the templates folder which has all the templates. Note that direct links \(\<a href\>\) won't work in Django backend. Hence please route it through the urls.py in erp folder.
 
 
 ##Authors
-Developers: Sebastin Santy, 
+Developers: Sebastin Santy
 
 ##License

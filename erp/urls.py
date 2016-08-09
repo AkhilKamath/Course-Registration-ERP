@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from timetable import views
+from timetable import views as timetableviews
+from home import views as homeviews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^timetable/$', views.timetable, name = 'timetable'),
-    url(r'^setup/$', views.setup, name = 'setup'),
+    url(r'^timetable/$', timetableviews.timetable, name = 'timetable'),
+    url(r'^setup/$', timetableviews.setup, name = 'setup'),
+    url(r'^login/$', homeviews.login_view, name = 'login'),
+    url(r'^dashboard/$', homeviews.Dashboard, name = 'dashboard'),
+    url(r'^$', homeviews.home)
 ]

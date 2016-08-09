@@ -1,1 +1,21 @@
 # Course-Registration-ERP
+
+##Setup Instructions
+
+1. Setup Python Virtual Environment (virtualenv): `virtualenv erp` .
+2. Go into the Virtual Enviroment: `cd erp`
+3. Activate the Environment: `source bin/activate`
+4. Clone this repository: `git clone https://github.com/OSDLabs/Course-Registration-ERP erp`
+5. Go into the cloned repository: `cd erp`
+6. Install the dependencies: `pip install -r requirements.txt`
+7. Run the webserver: `python manage.py runserver`
+8. Webserver runs for default on `localhost:8000`. To set the port manually run `python manage.py 8080` for `localhost:8080`
+
+##Additional Instructions
+1. To edit the templates, go to the templates folder which has all the templates. Note that direct links \(\<a href\>\) won't work in Django backend. Hence please route it through the urls.py in erp folder
+
+
+##Authors
+Developers: Sebastin Santy, 
+
+##License

@@ -1,0 +1,22 @@
+{% extends "regbase.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block title %}
+ERP
+{% endblock %}
+{% block head %}
+Sign in to ERP
+{% endblock %}
+{% block content %}
+<form method="post" action=".">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <input class='btn btn-block btn-success' type="submit" value="{% trans 'Sign In' %}" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+{% endblock %}
+{% block lowcontent %}
+
+<p>{% trans "Forgot Password" %}? <a href="#">{% trans "Get hash" %}</a></p>
+
+{% endblock %}
